@@ -18,7 +18,22 @@
 		A559EB14108CFFC70084A63B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165DFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		A559EB17108D02E50084A63B /* AddSnippetController.py in Resources */ = {isa = PBXBuildFile; fileRef = A559EB16108D02E50084A63B /* AddSnippetController.py */; };
 		A559EB42108D0A190084A63B /* Snippet.py in Resources */ = {isa = PBXBuildFile; fileRef = A559EB41108D0A190084A63B /* Snippet.py */; };
+		A559EB50108D0F760084A63B /* BWToolkitFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A559EB4F108D0F760084A63B /* BWToolkitFramework.framework */; };
+		A559EB8E108D101A0084A63B /* BWToolkitFramework.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A559EB4F108D0F760084A63B /* BWToolkitFramework.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A559EB94108D102A0084A63B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A559EB8E108D101A0084A63B /* BWToolkitFramework.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		089C165DFE840E0CC02AAC07 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
@@ -38,6 +53,7 @@
 		A559EA97108CFD8B0084A63B /* support */ = {isa = PBXFileReference; lastKnownFileType = folder; path = support; sourceTree = "<group>"; };
 		A559EB16108D02E50084A63B /* AddSnippetController.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = AddSnippetController.py; sourceTree = "<group>"; };
 		A559EB41108D0A190084A63B /* Snippet.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = Snippet.py; sourceTree = "<group>"; };
+		A559EB4F108D0F760084A63B /* BWToolkitFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BWToolkitFramework.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +63,7 @@
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				776DBEF80C109DC400169587 /* Python.framework in Frameworks */,
+				A559EB50108D0F760084A63B /* BWToolkitFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +92,7 @@
 		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A559EB4F108D0F760084A63B /* BWToolkitFramework.framework */,
 				77C82804067257F0000B614F /* CoreData.framework */,
 				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
 				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
@@ -151,6 +169,7 @@
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
+				A559EB94108D102A0084A63B /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -213,6 +232,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -232,6 +255,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
