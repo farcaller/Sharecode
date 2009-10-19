@@ -20,7 +20,5 @@ class Snippet(NSManagedObject):
         result = highlight(self.code(), lexer, formatter)
         b = NSString.stringWithString_(result).UTF8String()
         d = NSData.alloc().initWithBytes_length_(b, len(b))
-        print "bytes:"
-        print b
         rtf = NSAttributedString.alloc().initWithRTF_documentAttributes_(d, None)
         return rtf[0]
