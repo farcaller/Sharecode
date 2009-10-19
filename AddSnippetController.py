@@ -43,7 +43,7 @@ class AddSnippetController(NSObject):
         if self.langField.stringValue() == '':
             lex = guess_lexer(self.snippetField.stringValue())
             if lex:
-                self.langField.setStringValue_(lex.name)
+                self.langField.setStringValue_(lex.aliases[0])
         else:
             NSApp.endSheet_(sender.window())
             self.saveSnippet(self.titleField.stringValue(), self.langField.stringValue(), self.snippetField.stringValue())
