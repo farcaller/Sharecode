@@ -17,10 +17,10 @@ class AddSnippetController(NSObject):
     snippetField = IBOutlet()
     delegate = IBOutlet()
     
-    def showForWindow(self, win):
+    def showForWindow(self, win, txt=''):
         self.titleField.setStringValue_('')
         self.langField.setStringValue_('')
-        self.snippetField.setStringValue_('')
+        self.snippetField.setStringValue_(txt)
         NSApp.beginSheet_modalForWindow_modalDelegate_didEndSelector_contextInfo_(
             self.window, win, self, 'didEndSheet:returnCode:contextInfo:', None)
     

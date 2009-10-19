@@ -6,7 +6,7 @@
 #  Copyright Hack&Dev Team 2009. All rights reserved.
 #
 
-from objc import YES, NO, IBAction, IBOutlet
+from objc import YES, NO, IBAction, IBOutlet, signature
 from Foundation import *
 from AppKit import *
 from CoreData import *
@@ -23,7 +23,13 @@ class Sharecode_AppDelegate(NSObject):
     
     def applicationDidFinishLaunching_(self, sender):
         self.managedObjectContext()
-
+        NSApp.setServicesProvider_(self)
+    
+    @signature("v@:@@o^@")
+    def addSnippet_userData_error_(self,pboard,userData,error):
+        pboardString = pboard.stringForType_(NSStringPboardType)
+        self.snippetController.showForWindow(self.window, pboardString)
+    
     def applicationSupportFolder(self):
         paths = NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES)
         basePath = paths[0] if (len(paths) > 0) else NSTemporaryDirectory()

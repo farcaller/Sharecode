@@ -26,5 +26,21 @@
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>NSServices</key>
+	<array>
+		<dict>
+			<key>NSSendTypes</key>
+			<array>
+				<string>NSStringPboardType</string>
+			</array>
+			<key>NSMessage</key>
+			<string>addSnippet</string>
+			<key>NSMenuItem</key>
+			<dict>
+				<key>default</key>
+				<string>Add Snippet to Sharecode</string>
+			</dict>
+		</dict>
+	</array>
 </dict>
 </plist>
