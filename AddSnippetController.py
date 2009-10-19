@@ -9,6 +9,7 @@
 from objc import YES, NO, IBAction, IBOutlet
 from Foundation import *
 from AppKit import *
+from pygments.lexers import guess_lexer
 
 class AddSnippetController(NSObject):
     window = IBOutlet()
@@ -39,8 +40,13 @@ class AddSnippetController(NSObject):
     
     @IBAction
     def AddAction_(self, sender):
-        NSApp.endSheet_(sender.window())
-        self.saveSnippet(self.titleField.stringValue(), self.langField.stringValue(), self.snippetField.stringValue())
+        if self.langField.stringValue() == '':
+            lex = guess_lexer(self.snippetField.stringValue())
+            if lex:
+                self.langField.setStringValue_(lex.name)
+        else:
+            NSApp.endSheet_(sender.window())
+            self.saveSnippet(self.titleField.stringValue(), self.langField.stringValue(), self.snippetField.stringValue())
     
     @IBAction
     def CancelAction_(self, sender):
