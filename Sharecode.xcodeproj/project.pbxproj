@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		770B37ED0679A11B001EADE2 /* Sharecode_DataModel.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 770B37EC0679A11B001EADE2 /* Sharecode_DataModel.xcdatamodel */; };
 		776DBEE60C109D4C00169587 /* Sharecode_AppDelegate.py in Resources */ = {isa = PBXBuildFile; fileRef = 776DBEE50C109D4C00169587 /* Sharecode_AppDelegate.py */; };
 		776DBEF10C109D7D00169587 /* main.py in Resources */ = {isa = PBXBuildFile; fileRef = 776DBEF00C109D7D00169587 /* main.py */; };
 		776DBEF80C109DC400169587 /* Python.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 776DBEF70C109DC400169587 /* Python.framework */; };
@@ -20,6 +19,9 @@
 		A559EB42108D0A190084A63B /* Snippet.py in Resources */ = {isa = PBXBuildFile; fileRef = A559EB41108D0A190084A63B /* Snippet.py */; };
 		A559EB50108D0F760084A63B /* BWToolkitFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A559EB4F108D0F760084A63B /* BWToolkitFramework.framework */; };
 		A559EB8E108D101A0084A63B /* BWToolkitFramework.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A559EB4F108D0F760084A63B /* BWToolkitFramework.framework */; };
+		A559EBCA108D9BBA0084A63B /* MainWindowController.py in Resources */ = {isa = PBXBuildFile; fileRef = A559EBC9108D9BBA0084A63B /* MainWindowController.py */; };
+		A559EBE5108DA4240084A63B /* Sharecode_DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A559EBE4108DA4240084A63B /* Sharecode_DataModel.xcdatamodeld */; };
+		A559EBEF108DA5680084A63B /* DataModel_1-2.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = A559EBEE108DA5680084A63B /* DataModel_1-2.xcmappingmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -54,6 +56,9 @@
 		A559EB16108D02E50084A63B /* AddSnippetController.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = AddSnippetController.py; sourceTree = "<group>"; };
 		A559EB41108D0A190084A63B /* Snippet.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = Snippet.py; sourceTree = "<group>"; };
 		A559EB4F108D0F760084A63B /* BWToolkitFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BWToolkitFramework.framework; sourceTree = "<group>"; };
+		A559EBC9108D9BBA0084A63B /* MainWindowController.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = MainWindowController.py; sourceTree = "<group>"; };
+		A559EBE6108DA4240084A63B /* Sharecode_DataModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Sharecode_DataModel 2.xcdatamodel"; sourceTree = "<group>"; };
+		A559EBEE108DA5680084A63B /* DataModel_1-2.xcmappingmodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcmappingmodel; path = "DataModel_1-2.xcmappingmodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +81,7 @@
 				776DBEE50C109D4C00169587 /* Sharecode_AppDelegate.py */,
 				A559EB16108D02E50084A63B /* AddSnippetController.py */,
 				A559EB41108D0A190084A63B /* Snippet.py */,
+				A559EBC9108D9BBA0084A63B /* MainWindowController.py */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -154,7 +160,8 @@
 		7756732906782D8800D1FEB8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				770B37EC0679A11B001EADE2 /* Sharecode_DataModel.xcdatamodel */,
+				A559EBE4108DA4240084A63B /* Sharecode_DataModel.xcdatamodeld */,
+				A559EBEE108DA5680084A63B /* DataModel_1-2.xcmappingmodel */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -210,6 +217,7 @@
 				A559EB13108CFFC40084A63B /* MainMenu.xib in Resources */,
 				A559EB17108D02E50084A63B /* AddSnippetController.py in Resources */,
 				A559EB42108D0A190084A63B /* Snippet.py in Resources */,
+				A559EBCA108D9BBA0084A63B /* MainWindowController.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,7 +229,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
-				770B37ED0679A11B001EADE2 /* Sharecode_DataModel.xcdatamodel in Sources */,
+				A559EBE5108DA4240084A63B /* Sharecode_DataModel.xcdatamodeld in Sources */,
+				A559EBEF108DA5680084A63B /* DataModel_1-2.xcmappingmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +326,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A559EBE4108DA4240084A63B /* Sharecode_DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				770B37EC0679A11B001EADE2 /* Sharecode_DataModel.xcdatamodel */,
+				A559EBE6108DA4240084A63B /* Sharecode_DataModel 2.xcdatamodel */,
+			);
+			currentVersion = A559EBE6108DA4240084A63B /* Sharecode_DataModel 2.xcdatamodel */;
+			path = Sharecode_DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
 }

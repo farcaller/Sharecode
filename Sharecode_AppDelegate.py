@@ -24,7 +24,7 @@ class Sharecode_AppDelegate(NSObject):
     def applicationDidFinishLaunching_(self, sender):
         self.managedObjectContext()
         NSApp.setServicesProvider_(self)
-    
+        
     @signature("v@:@@o^@")
     def addSnippet_userData_error_(self,pboard,userData,error):
         pboardString = pboard.stringForType_(NSStringPboardType)
@@ -52,7 +52,10 @@ class Sharecode_AppDelegate(NSObject):
         url = NSURL.fileURLWithPath_(storePath)
         self._persistentStoreCoordinator = NSPersistentStoreCoordinator.alloc().initWithManagedObjectModel_(self.managedObjectModel())
         
-        success, error = self._persistentStoreCoordinator.addPersistentStoreWithType_configuration_URL_options_error_(NSXMLStoreType, None, url, None, None)
+        success, error = self._persistentStoreCoordinator.addPersistentStoreWithType_configuration_URL_options_error_(
+            NSXMLStoreType, None, url, {
+                NSMigratePersistentStoresAutomaticallyOption: YES,
+            }, None)
         if not success:
             NSApp().presentError_(error)
         
