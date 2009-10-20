@@ -16,7 +16,7 @@ class Snippet(NSManagedObject):
         print "want prettified for",self.language()
         lexer = get_lexer_by_name(self.language(), stripall=True)
         print "lexer:",lexer
-        formatter = RtfFormatter()
+        formatter = RtfFormatter(fontface='menlo')
         result = highlight(self.code(), lexer, formatter)
         b = NSString.stringWithString_(result).UTF8String()
         d = NSData.alloc().initWithBytes_length_(b, len(b))
